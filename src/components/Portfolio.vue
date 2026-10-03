@@ -54,35 +54,35 @@ const closeModal = () => {
         </a>
       </div>
 
-      <!-- Grid Portofolio -->
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4" id="gallery">
+      <!-- Masonry Grid Portofolio -->
+      <div class="columns-2 md:columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4" id="gallery">
         <figure
           v-for="item in visibleProjects"
           :key="item.id"
           @click="openProject(item)"
-          :class="[
-            'ph relative overflow-hidden cursor-pointer group rounded-lg',
-            item.featured ? 'aspect-[3/4] md:row-span-2 md:aspect-auto' : 'aspect-[4/5]'
-          ]"
+          class="break-inside-avoid relative overflow-hidden cursor-pointer group rounded-xl ph shadow-sm hover:shadow-md transition-shadow"
         >
-          <!-- Placeholder Icon jika gambar loading/kosong -->
-          <div class="absolute inset-0 flex items-center justify-center text-ink/20">
+          <!-- Gambar Cover Proyek (foto index 0) - mengikuti rasio asli foto -->
+          <img
+            v-if="item.images && item.images.length"
+            :src="item.images[0]"
+            :alt="`${item.title} - ${item.subtitle || 'Bontang'}`"
+            class="w-full h-auto block object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            @error="$event.target.style.display='none'"
+          />
+
+          <!-- Fallback jika gambar belum ada -->
+          <div
+            v-else
+            class="aspect-[4/5] w-full flex items-center justify-center text-ink/20 bg-slate2/20"
+          >
             <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <rect x="3" y="3" width="18" height="18" rx="2"/>
               <circle cx="8.5" cy="8.5" r="1.5"/>
               <path d="m21 15-5-5L5 21"/>
             </svg>
           </div>
-
-          <!-- Gambar Cover Proyek (foto index 0) -->
-          <img
-            v-if="item.images && item.images.length"
-            :src="item.images[0]"
-            :alt="`${item.title} - ${item.subtitle || 'Bontang'}`"
-            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            loading="lazy"
-            @error="$event.target.style.display='none'"
-          />
 
           <!-- Gradient Overlay & Caption Info -->
           <figcaption
