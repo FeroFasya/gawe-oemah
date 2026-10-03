@@ -15,9 +15,12 @@ const closeMenu = () => {
 <template>
   <header class="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur text-white">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-5 h-16">
-      <a href="#top" class="flex items-center gap-3" aria-label="Gawe Oemah">
-        <img src="/logo-icon.png" alt="Logo Gawe Oemah" class="h-9 w-auto rounded object-contain" @error="$event.target.style.visibility='hidden'">
-        <span class="font-display text-xl text-gold">Gawe Oemah</span>
+      <a href="#top" class="flex items-center" aria-label="Gawe Oemah">
+        <img
+          src="/logo-horizontal.png"
+          alt="Gawe Oemah — Jasa Bangun & Renovasi Rumah"
+          class="h-9 md:h-10 w-auto object-contain"
+        />
       </a>
       <nav class="hidden md:flex items-center gap-8 text-sm">
         <a href="#layanan" class="hover:text-gold transition-colors">Layanan</a>
