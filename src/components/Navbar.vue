@@ -27,7 +27,7 @@ const closeMenu = () => {
         <a href="#portofolio" class="hover:text-gold transition-colors">Portofolio</a>
         <a href="#alur" class="hover:text-gold transition-colors">Alur kerja</a>
         <a href="#lokasi" class="hover:text-gold transition-colors">Lokasi</a>
-        <a href="https://wa.me/6282255156237" class="bg-gold text-ink font-bold px-4 py-2 rounded-full hover:bg-white transition">Konsultasi gratis</a>
+        <a href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20tertarik%20untuk%20konsultasi%20desain%20dan%20bangun%20rumah." class="bg-gold text-ink font-bold px-4 py-2 rounded-full hover:bg-white transition">Konsultasi gratis</a>
       </nav>
       <button
         @click="toggleMenu"
@@ -48,7 +48,7 @@ const closeMenu = () => {
       <a href="#portofolio" @click="closeMenu" class="block py-3">Portofolio</a>
       <a href="#alur" @click="closeMenu" class="block py-3">Alur kerja</a>
       <a href="#lokasi" @click="closeMenu" class="block py-3">Lokasi</a>
-      <a href="https://wa.me/6282255156237" @click="closeMenu" class="block mt-2 text-center bg-gold text-ink font-bold py-3 rounded-full">Konsultasi gratis</a>
+      <a href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20tertarik%20untuk%20konsultasi%20desain%20dan%20bangun%20rumah." @click="closeMenu" class="block mt-2 text-center bg-gold text-ink font-bold py-3 rounded-full">Konsultasi gratis</a>
     </div>
   </header>
 </template>

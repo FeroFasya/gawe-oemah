@@ -32,7 +32,7 @@ const currentYear = new Date().getFullYear()
               <span>@gawe_oemah</span>
             </a>
             <a
-              href="https://wa.me/6282255156237"
+              href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20ingin%20konsultasi%20mengenai%20layanan%20desain%20dan%20bangun%20rumah."
               target="_blank"
               rel="noopener"
               class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold text-ink text-xs font-bold hover:bg-white transition-colors"
@@ -62,7 +62,7 @@ const currentYear = new Date().getFullYear()
             <li><a href="#portofolio" class="hover:text-gold transition-colors">Portofolio</a></li>
             <li><a href="#alur" class="hover:text-gold transition-colors">Alur Kerja</a></li>
             <li><a href="#lokasi" class="hover:text-gold transition-colors">Lokasi Kantor</a></li>
-            <li><a href="https://wa.me/6282255156237" class="hover:text-gold transition-colors">Konsultasi Gratis</a></li>
+            <li><a href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20ingin%20konsultasi%20gratis%20mengenai%20rencana%20rumah." class="hover:text-gold transition-colors">Konsultasi Gratis</a></li>
           </ul>
         </div>
 
@@ -73,7 +73,7 @@ const currentYear = new Date().getFullYear()
             <p>Jl. Brokoli 13 No. 129</p>
             <p>Bontang, Kalimantan Timur</p>
             <p class="pt-1">
-              <a href="https://wa.me/6282255156237" class="text-gold font-bold hover:underline">
+              <a href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20ingin%20konsultasi%20seputar%20desain/bangun%20rumah." class="text-gold font-bold hover:underline">
                 +62 822-5515-6237
               </a>
             </p>

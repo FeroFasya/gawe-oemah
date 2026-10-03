@@ -7,10 +7,11 @@ import Portfolio from './components/Portfolio.vue'
 import Workflow from './components/Workflow.vue'
 import ContactLocation from './components/ContactLocation.vue'
 import Footer from './components/Footer.vue'
+import FloatingWhatsApp from './components/FloatingWhatsApp.vue'
 </script>
 
 <template>
-  <div class="bg-mist text-ink antialiased min-h-screen">
+  <div class="bg-mist text-ink antialiased min-h-screen relative">
     <Navbar />
     <main id="top">
       <Hero />
@@ -21,5 +22,7 @@ import Footer from './components/Footer.vue'
       <ContactLocation />
     </main>
     <Footer />
+    <!-- Floating WhatsApp Action -->
+    <FloatingWhatsApp />
   </div>
 </template>

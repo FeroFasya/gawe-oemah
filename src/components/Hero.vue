@@ -64,7 +64,7 @@ onUnmounted(() => {
         <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.02]">Rumah impian, sesuai budget Anda.</h1>
         <p class="mt-6 text-white/80 max-w-md leading-relaxed">Kami merancang dan membangun rumah dari satu tim yang sama, jadi desain di gambar sama dengan hasil di lapangan.</p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="https://wa.me/6282255156237" class="bg-gold text-ink font-bold px-6 py-3 rounded-full hover:bg-white transition">Konsultasi gratis</a>
+          <a href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20ingin%20konsultasi%20gratis%20untuk%20rencana%20rumah%20saya." class="bg-gold text-ink font-bold px-6 py-3 rounded-full hover:bg-white transition">Konsultasi gratis</a>
           <a href="#portofolio" class="border border-white/40 backdrop-blur-sm px-6 py-3 rounded-full hover:border-gold hover:text-gold transition">Lihat proyek</a>
         </div>
       </div>
