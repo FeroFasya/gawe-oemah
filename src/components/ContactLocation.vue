@@ -2,12 +2,20 @@
   <!-- CTA BANNER -->
   <section class="bg-gold">
     <div class="max-w-6xl mx-auto px-5 py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-      <h2 class="font-display font-bold text-3xl md:text-4xl max-w-lg">Punya lahan atau ide rumah? Mulai dari satu pesan.</h2>
+      <div>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-ink max-w-xl">
+          Satu Tim untuk Mewujudkan Ruang Anda.
+        </h2>
+        <p class="mt-2 text-ink/80 text-sm sm:text-base font-medium max-w-lg">
+          Membangun sebuah ruang tanpa repot mengatur banyak pihak. Dari perencanaan hingga serah terima.
+        </p>
+      </div>
       <a
-        href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20punya%20lahan%20atau%20ide%20rumah%20dan%20ingin%20konsultasi."
-        class="self-start bg-ink text-white font-bold px-7 py-4 rounded-full hover:bg-white hover:text-ink transition"
+        href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20mari%20bicarakan%20kebutuhan%20ruang%20saya."
+        class="self-start md:self-auto inline-flex items-center gap-2 bg-ink text-white font-bold px-7 py-4 rounded-full hover:bg-white hover:text-ink transition shadow-lg shrink-0"
       >
-        Chat via WhatsApp
+        <span>Mari Bicarakan Kebutuhan Ruang Anda</span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
   </section>

@@ -77,12 +77,12 @@ const getWaLink = (title) => {
       @click.self="emit('close')"
     >
       <div
-        class="relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden my-auto max-h-[90vh] flex flex-col"
+        class="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col"
       >
         <!-- Tombol Tutup -->
         <button
           @click="emit('close')"
-          class="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-ink/70 hover:bg-ink text-white transition-colors"
+          class="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-ink/75 hover:bg-ink text-white transition-colors shadow-md"
           aria-label="Tutup modal"
         >
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -90,13 +90,23 @@ const getWaLink = (title) => {
           </svg>
         </button>
 
-        <!-- Area Gambar / Slider -->
-        <div class="relative w-full aspect-[16/10] sm:aspect-[16/9] bg-slate2 flex-shrink-0 overflow-hidden">
+        <!-- Area Gambar / Slider dengan Ambient Blur Backdrop & Object-Contain -->
+        <div class="relative w-full h-[280px] sm:h-[380px] md:h-[420px] bg-ink flex-shrink-0 overflow-hidden flex items-center justify-center">
+          <!-- Ambient blurred backdrop image untuk mengisi sisa ruang secara estetik -->
+          <img
+            v-if="project.images?.length"
+            :src="project.images[activeImageIndex]"
+            alt=""
+            aria-hidden="true"
+            class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-35 scale-110 pointer-events-none"
+          />
+
+          <!-- Foto utama: utuh 100% tanpa kepotong (object-contain) -->
           <img
             v-if="project.images?.length"
             :src="project.images[activeImageIndex]"
             :alt="`${project.title} - Foto ${activeImageIndex + 1}`"
-            class="w-full h-full object-cover transition-opacity duration-300"
+            class="relative z-10 max-w-full max-h-full object-contain transition-all duration-300 drop-shadow-md"
           />
 
           <!-- Tombol Panah Prev / Next jika ada lebih dari 1 foto -->
@@ -106,7 +116,7 @@ const getWaLink = (title) => {
           >
             <button
               @click.stop="prevImage"
-              class="pointer-events-auto p-2 rounded-full bg-ink/60 hover:bg-ink text-white transition-colors"
+              class="pointer-events-auto p-2.5 rounded-full bg-ink/70 hover:bg-ink text-white transition-colors shadow-md"
               aria-label="Foto sebelumnya"
             >
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -115,7 +125,7 @@ const getWaLink = (title) => {
             </button>
             <button
               @click.stop="nextImage"
-              class="pointer-events-auto p-2 rounded-full bg-ink/60 hover:bg-ink text-white transition-colors"
+              class="pointer-events-auto p-2.5 rounded-full bg-ink/70 hover:bg-ink text-white transition-colors shadow-md"
               aria-label="Foto berikutnya"
             >
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -127,7 +137,7 @@ const getWaLink = (title) => {
           <!-- Indikator Jumlah Foto -->
           <div
             v-if="project.images?.length > 1"
-            class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-ink/70 text-white text-xs font-semibold backdrop-blur-sm"
+            class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-ink/80 text-white text-xs font-semibold backdrop-blur-sm"
           >
             {{ activeImageIndex + 1 }} / {{ project.images.length }}
           </div>
@@ -136,14 +146,14 @@ const getWaLink = (title) => {
         <!-- Thumbnail Strip jika lebih dari 1 foto -->
         <div
           v-if="project.images?.length > 1"
-          class="flex gap-2 p-3 bg-mist border-b border-ink/10 overflow-x-auto"
+          class="flex gap-2 px-4 py-2.5 bg-mist border-b border-ink/10 overflow-x-auto flex-shrink-0"
         >
           <button
             v-for="(img, idx) in project.images"
             :key="idx"
             @click="activeImageIndex = idx"
             :class="[
-              'relative h-14 w-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all',
+              'relative h-12 w-16 sm:h-14 sm:w-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all',
               activeImageIndex === idx ? 'border-gold scale-105 shadow' : 'border-transparent opacity-60 hover:opacity-100'
             ]"
           >
@@ -151,14 +161,14 @@ const getWaLink = (title) => {
           </button>
         </div>
 
-        <!-- Detail Konten Proyek -->
-        <div class="p-6 sm:p-8 overflow-y-auto space-y-4">
+        <!-- Detail Konten Proyek (Lega & Jelas) -->
+        <div class="p-5 sm:p-7 overflow-y-auto space-y-3.5">
           <!-- Tags / Lokasi & Tahun -->
-          <div class="flex flex-wrap gap-2 text-xs font-bold text-slate2">
+          <div class="flex flex-wrap items-center gap-2">
             <span
               v-for="tag in project.tags"
               :key="tag"
-              class="px-2.5 py-1 rounded-md bg-mist text-ink/70"
+              class="px-2.5 py-1 rounded-md bg-mist text-ink/80 text-xs font-semibold"
             >
               {{ tag }}
             </span>
@@ -169,13 +179,13 @@ const getWaLink = (title) => {
             {{ project.title }}
           </h3>
 
-          <!-- Subtitle Proyek (Work Sans Bold) -->
-          <p v-if="project.subtitle" class="font-body font-bold text-brick text-lg tracking-tight">
+          <!-- Subtitle Proyek (Work Sans SemiBold/Bold) -->
+          <p v-if="project.subtitle" class="font-body font-bold text-brick text-base sm:text-lg tracking-tight">
             {{ project.subtitle }}
           </p>
 
-          <!-- Deskripsi Singkat -->
-          <p class="text-slate2 leading-relaxed text-sm sm:text-base">
+          <!-- Deskripsi Singkat: Jelas, Berjarak & Nyaman Dibaca -->
+          <p class="font-body text-ink/85 leading-relaxed text-sm sm:text-base font-normal">
             {{ project.description }}
           </p>
 

@@ -59,15 +59,34 @@ onUnmounted(() => {
     <div class="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/30 to-transparent"></div>
 
     <div class="relative w-full max-w-6xl mx-auto px-5 pt-28 pb-14 md:pb-24">
-      <div class="max-w-2xl rise">
-        <p class="text-gold text-sm font-medium mb-5">Design × Build · Bontang, Kalimantan Timur</p>
-        <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-[1.02]">Rumah impian, sesuai budget Anda.</h1>
-        <p class="mt-6 text-white/80 max-w-md leading-relaxed">Kami merancang dan membangun rumah dari satu tim yang sama, jadi desain di gambar sama dengan hasil di lapangan.</p>
+        <!-- Pill Badge Keren & Bersih -->
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-gold text-xs font-semibold mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+          <span>Design × Build · Bontang, Kalimantan Timur</span>
+        </div>
+
+        <!-- Headline Utama (Spasi Leading Aman Tidak Tabrakan) -->
+        <h1 class="font-display font-bold text-4xl sm:text-6xl lg:text-7xl leading-[1.18] text-white">
+          Bangun Rumah<br class="hidden sm:inline" /> Jadi Mudah.
+        </h1>
+
+        <!-- Penjelasan Terpadu yang Elegan (Tidak Numpuk Berantakan) -->
+        <div class="mt-6 space-y-2 max-w-lg">
+          <p class="font-body font-bold text-base sm:text-lg text-gold/95 tracking-tight">
+            Design, Build & Interior — Dari Ide Hingga Siap Dihuni.
+          </p>
+          <p class="text-white/80 text-sm sm:text-base leading-relaxed">
+            Satu tim terintegrasi untuk mewujudkan ruang impian Anda tanpa repot mengatur banyak pihak dan vendor terpisah.
+          </p>
+        </div>
+
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20ingin%20konsultasi%20gratis%20untuk%20rencana%20rumah%20saya." class="bg-gold text-ink font-bold px-6 py-3 rounded-full hover:bg-white transition">Konsultasi gratis</a>
-          <a href="#portofolio" class="border border-white/40 backdrop-blur-sm px-6 py-3 rounded-full hover:border-gold hover:text-gold transition">Lihat proyek</a>
+          <a href="https://wa.me/6282255156237?text=Halo%20Gawe%20Oemah,%20saya%20ingin%20konsultasi%20kebutuhan%20ruang%20hunian%20saya." class="inline-flex items-center gap-2 bg-gold text-ink font-bold px-6 py-3 rounded-full hover:bg-white transition shadow-md">
+            <span>Konsultasikan Kebutuhan Ruang Anda</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#portofolio" class="border border-white/40 backdrop-blur-sm px-6 py-3 rounded-full hover:border-gold hover:text-gold transition">Lihat Portofolio</a>
         </div>
       </div>
-    </div>
   </section>
 </template>

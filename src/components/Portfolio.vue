@@ -42,7 +42,7 @@ const closeModal = () => {
       <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
         <div>
           <p class="text-brick font-bold text-sm tracking-wider uppercase mb-2">Portofolio Pilihan</p>
-          <h2 class="font-display font-bold text-4xl md:text-5xl text-ink">Karya & Proyek Kami</h2>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-ink leading-tight">Ini Gawe Oemah, Ini yang Kami Kerjakan.</h2>
         </div>
         <a
           href="https://www.instagram.com/gawe_oemah/"
