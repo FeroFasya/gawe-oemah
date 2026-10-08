@@ -17,6 +17,53 @@ export const projects = [
     featured: true
   },
   {
+    id: 'studio-go',
+    title: 'STUDIO GO',
+    subtitle: 'Creative Workspace & Architectural Office',
+    category: 'commercial',
+    tags: ['#Bontang', '#CommercialSpace', '#InteriorDesign'],
+    description: 'Ruang kerja kreatif Gawe Oemah yang dirancang fungsional dan inspiratif, memadukan estetika industrial modern, pencahayaan presisi, dan material natural.',
+    images: [
+      '/projects/studio-go/1.webp',
+      '/projects/studio-go/2.webp',
+      '/projects/studio-go/3.webp',
+      '/projects/studio-go/4.webp',
+      '/projects/studio-go/5.webp',
+      '/projects/studio-go/7.webp',
+      '/projects/studio-go/8.webp',
+      '/projects/studio-go/9.webp',
+      '/projects/studio-go/10.webp',
+      '/projects/studio-go/11.webp',
+      '/projects/studio-go/12.webp',
+      '/projects/studio-go/13.webp',
+      '/projects/studio-go/14.webp',
+      '/projects/studio-go/15.webp'
+    ],
+    featured: true
+  },
+  {
+    id: 'dd-house',
+    title: 'DD HOUSE',
+    subtitle: 'Bright Open Atmosphere & Gable Accents',
+    category: 'residential',
+    tags: ['#Bontang', '#Residential', '#2026'],
+    description: 'Hunian modern dengan pencahayaan alami berlimpah, aksen atap pelana kontemporer, dan tata ruang terbuka yang menghadirkan suasana asri dan sejuk.',
+    images: [
+      '/projects/dd-house/1.webp',
+      '/projects/dd-house/2.webp',
+      '/projects/dd-house/3.webp',
+      '/projects/dd-house/4.webp',
+      '/projects/dd-house/5.webp',
+      '/projects/dd-house/6.webp',
+      '/projects/dd-house/7.webp',
+      '/projects/dd-house/8.webp',
+      '/projects/dd-house/9.webp',
+      '/projects/dd-house/10.webp',
+      '/projects/dd-house/11.webp'
+    ],
+    featured: true
+  },
+  {
     id: 'r-house',
     title: 'R HOUSE',
     subtitle: 'Contemporary Clean Lines & Facade',
